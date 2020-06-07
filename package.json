@@ -2,6 +2,7 @@
 	"name": "extract-sql-from-script",
 	"displayName": "Extract SQL Queries from Python Scripts",
   "description": "Extract SQL from Python scripts and substitute variables in/out.",
+  "publisher": "Joe Fenton",
   "icon": "images/QueryExtractor.png",
 	"version": "0.0.1",
 	"engines": {
