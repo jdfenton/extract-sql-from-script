@@ -63,7 +63,7 @@ export async function extractSQL() {
       queryList.push(substitutedQueryVars[i].queryName);
     }
     queryToExtract = vscode.window.showQuickPick(queryList, {
-      placeHolder: "Select a query to extract from the DAG"
+      placeHolder: "Select a query to extract from the script:"
     });
     for (i = 0; i < substitutedQueryVars.length; i++) {
       if (await queryToExtract === substitutedQueryVars[i].queryName) {
@@ -74,7 +74,7 @@ export async function extractSQL() {
     }
   }
   else {
-    vscode.window.showErrorMessage("No query found within a script in the active text editor.");
+    vscode.window.showErrorMessage("No query found in the active text editor.");
     return;
   }
 }

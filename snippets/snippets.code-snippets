@@ -5,7 +5,6 @@
         "/* test variables for substitution",
        "   {variables.source_project_id}: $1",
        "   {processing_date}: 2020-01-01$2",
-       "   thhis is from the new script",
        "   end test variables */", 
     ],
     "description": "Insert test variables for extracting SQL from scripts"

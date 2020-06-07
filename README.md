@@ -1,65 +1,46 @@
-# extract-sql-from-script README
+# extract-sql-from-script
 
-This is the README for your extension "extract-sql-from-script". After writing up a brief description, we recommend including the following sections.
+This extension is built to make it easier for data engineers to prepare SQL queries to be included Python scripts (eg Airflow DAGs), and extract SQL queries from scripts.
+
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+* Extract queries from a python script into a new document. 
+* Replace variable names with test values, maintaining the original text in commented line.
+* Toggle between variable names and test values.
+* Test variable values are defined in a block comment within the query
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+![Snippet](images/extract-query.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands (Cmd+P or Ctrl+P)
 
-## Requirements
+* `SQL Extractor: extract query from script`
+* `SQL Extractor: sub variable names into query`
+* `SQL Extractor: sub test variable values into query`
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Test variable substitution
 
-## Extension Settings
+Insert a comment block for substituting test variables into a query when extracting from a python script. Start typing 
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```
+      /* test variables for substitution
+         {variables.source_project_id}:
+         {processing_date}: 2020-01-01
+         end test variables */
+ ```
 
-For example:
+**Start typing** `test variables for substitution` into a `python` or `sql` document to insert a template snippet. 
 
-This extension contributes the following settings:
+## Required document structure
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+The query extractor will look at all text contained between a line ending in `f"""` and a line of `"""`.
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```
+dim_employee = f"""
+    SELECT
+      first_name
+    FROM
+      employee_table
+"""
+ ```
