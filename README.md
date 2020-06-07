@@ -1,4 +1,4 @@
-# extract-sql-from-script
+# Extract SQL Queries from Python Scripts
 
 This extension is built to make it easier for data engineers to prepare SQL queries to be included Python scripts (eg Airflow DAGs), and extract SQL queries from scripts.
 
@@ -6,7 +6,7 @@ This extension is built to make it easier for data engineers to prepare SQL quer
 ## Features
 
 * Extract queries from a python script into a new document. 
-* Replace variable names with test values, maintaining the original text in commented line.
+* Replace variable names with test values, maintaining the original text in an adjacent  comment.
 * Toggle between variable names and test values.
 * Test variable values are defined in a block comment within the query
 

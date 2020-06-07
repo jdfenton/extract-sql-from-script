@@ -1,14 +1,14 @@
 {
 	"name": "extract-sql-from-script",
-	"displayName": "extract-sql-from-script",
-	"description": "Extract SQL from Python Airflow DAGs and substitute variables.",
+	"displayName": "Extract SQL Queries from Python Scripts",
+  "description": "Extract SQL from Python scripts and substitute variables in/out.",
+  "icon": "images/QueryExtractor.png",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
 	"categories": [
-    "Other",
-    "Snippets"
+    "Other"
 	],
 	"activationEvents": [
     "onCommand:extract-sql-from-script.extractSQL",
@@ -69,5 +69,12 @@
 	},
 	"dependencies": {
 		"path": "^0.12.7"
-	}
+  },
+  "bugs": {
+    "url": "https://github.com/jdfenton/extract-sql-from-script/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdfenton/extract-sql-from-script"
+  }
 }
