@@ -13,7 +13,7 @@ This extension is built to make it easier for data engineers to prepare SQL quer
 
 ![Snippet](images/extract-query.gif)
 
-## Commands (Cmd+P or Ctrl+P)
+## Commands (Cmd+Shift+P or Ctrl+Shift+P)
 
 * `SQL Extractor: extract query from script`
 * `SQL Extractor: sub variable names into query`

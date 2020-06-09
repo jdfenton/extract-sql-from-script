@@ -13,7 +13,7 @@ export async function extractSQL() {
     return;
   }
   const docText = editor.document.getText();
-  var codeLine = docText.split("\n");
+  var codeLine = docText.split(/(?:\r\n|\r|\n)/g);
   var i = 0;
   var queries = [];
   //loop though all lines of code

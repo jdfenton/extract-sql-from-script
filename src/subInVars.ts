@@ -13,7 +13,7 @@ export function subInVars() {
     return;
   }
   const docText = editor.document.getText();
-  var codeLine = docText.split("\n");
+  var codeLine = docText.split(/(?:\r\n|\r|\n)/g);
   //loop though all lines of code
   for (var i = 0; i < codeLine.length; i++) {
     //if code line ends in f""" then treat it as the start of a query

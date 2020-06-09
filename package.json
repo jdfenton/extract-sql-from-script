@@ -4,7 +4,7 @@
   "description": "Extract SQL from Python scripts and substitute variables in/out.",
   "publisher": "JoeFenton",
   "icon": "images/QueryExtractor.png",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.45.0"
 	},

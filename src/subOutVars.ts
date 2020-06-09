@@ -14,9 +14,9 @@ export function subOutVars() {
     return;
   }
   const docText = editor.document.getText();
-  var codeLine = docText.split("\n");
+  var codeLine = docText.split(/(?:\r\n|\r|\n)/g);
   for (var i = 0; i < codeLine.length; i++) {
-    query[0].queryCode.push(new QueryCodeLine(codeLine[i] + '\n'));
+    query[0].queryCode.push(new QueryCodeLine(codeLine[i] + "\n"));
   }
   var substitutedQueryVars = loadQueryVariables(query);
   if (!substitutedQueryVars) {
