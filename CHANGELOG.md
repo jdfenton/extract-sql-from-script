@@ -3,7 +3,7 @@
 All notable changes to the "extract-sql-from-script" extension will be documented in this file.
 
 
-## 0.0.3 - 2020-06-10
+## 0.0.4 - 2020-06-10
 
 -Changed: query read function to consider all multi line strings inside tripple quotes `"""`, previously only f-strings were considered.
 -Fixed: only the first instance of a variable was replaced where the same variable existed twice on the same line.
