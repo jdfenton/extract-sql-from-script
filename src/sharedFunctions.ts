@@ -64,7 +64,8 @@ export function loadQueryVariables(queries: Query[]) {
     for (var i=0; i<codeLine.length; i++)  {
       for (var k=0; k<queries[j].queryVariables.length; k++) {
         if(codeLine[i].codeText.includes(queries[j].queryVariables[k].varName) && codeLine[i].eligibleForSub) {
-          codeLine[i].codeText = codeLine[i].codeText.replace(queries[j].queryVariables[k].varName, queries[j].queryVariables[k].varValue).replace(/(?:\r\n|\r|\n)/g, "");
+          var replaceLine = new RegExp(queries[j].queryVariables[k].varName, "g");
+          codeLine[i].codeText = codeLine[i].codeText.replace(replaceLine, queries[j].queryVariables[k].varValue).replace(/(?:\r\n|\r|\n)/g, "");
         }
       }
       //if variables replaced, append original (can't happen in the first loop as some lines have multiple variables and will duplicate)

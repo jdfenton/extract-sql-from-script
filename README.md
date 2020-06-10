@@ -34,13 +34,13 @@ Insert a comment block for substituting test variables into a query when extract
 
 ## Required document structure
 
-The query extractor will look at all text contained between a line ending in `f"""` and a line of `"""`.
+The query extractor will look at all text contained between a line ending in `"""` and a terminating line of `"""`.
 
 ```
-dim_employee = f"""
+  dim_employee = f"""
     SELECT
       first_name
     FROM
       employee_table
-"""
+  """
  ```

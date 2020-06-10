@@ -21,7 +21,7 @@ export async function extractSQL() {
     var trimmedCode = codeLine[i].toLowerCase().trim();
     //load every text between f""" and """ into queries array.
     //if code line ends in f""" then treat it as the start of a query
-    if (trimmedCode.substr(trimmedCode.length - 4) === "f\"\"\"") {
+    if (trimmedCode.substr(trimmedCode.length - 4) === "\"\"\"") {
       var queryName = codeLine[i].trim().substr(0, codeLine[i].trim().indexOf("="));
       queries.push(new Query(queryName));
       i++;
