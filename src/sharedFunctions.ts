@@ -54,7 +54,7 @@ export function loadQueryVariables(queries: Query[]) {
         }
       }
 
-      if (codeLine[i].codeText.includes("  --Substituted from: ")) {
+      if (codeLine[i].codeText.includes("--Substituted from:")) {
         codeLine[i].eligibleForSub=false;
       }
       i++;

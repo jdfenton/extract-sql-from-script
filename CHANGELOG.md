@@ -2,6 +2,10 @@
 
 All notable changes to the "extract-sql-from-script" extension will be documented in this file.
 
+## 0.0.5 - 2020-06-12
+
+-Changed: removed white space from the search string `--Substituted from:`.
+
 
 ## 0.0.4 - 2020-06-10
 
