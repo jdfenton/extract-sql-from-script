@@ -1,6 +1,11 @@
 # Change Log
 
-All notable changes to the "extract-sql-from-script" extension will be documented in this file.
+## 0.0.6 - 2020-07-27
+
+-Changed: allow any query contained between `"""` and `"""`, including single line queries.
+-Changed: use `Unnamed query` where a query name cannot be discerned (eg `dim_employee = """...` )
+-Fixed: issues with cleaning up query list (queries must contain the word `select`).
+
 
 ## 0.0.5 - 2020-06-12
 

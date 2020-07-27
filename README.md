@@ -24,7 +24,7 @@ This extension is built to make it easier for data engineers to extract SQL quer
 ## Extracting SQL from a python script
 Initiate using `SQL Extractor: extract query from script` from the command palate.
 
-Queries must be contained in a multi-line string between a line ending in `"""` and a terminating line of `"""`.
+Queries must be contained in a multi-line string between `"""` and `"""`.
 
 For example:
 ```

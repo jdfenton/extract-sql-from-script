@@ -96,8 +96,8 @@ export async function printTextToNewFile(sql: string) {
 }
 
 export function removeInvalidQueries(queries: Query[]) {
-  for (var i=0; i<queries.length; i++)  {
-    if (queries[i].selectCount === 0) {
+  for (var i= (queries.length -1); i>=0; i--)  {
+    if (queries[i].selectCount == 0) {
       queries.splice(i, 1);
     }
   }  
